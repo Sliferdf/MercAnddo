@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondohistorial"
+    tools:context=".Historial">
+
+    <Button
+        android:id="@+id/buttonList3"
+        android:layout_width="100dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconolist"
+        android:onClick="Listado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHome3"
+        android:layout_width="100dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconohist"
+        android:onClick="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPrice3"
+        app:layout_constraintStart_toEndOf="@+id/buttonList3" />
+
+    <Button
+        android:id="@+id/buttonPrice3"
+        android:layout_width="100dp"
+        android:layout_height="98dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconohist2"
+        android:onClick="Historial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="399dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/datosNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="156dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/datosTamaño"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintStart_toEndOf="@+id/imgProducto"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/datosTamaño"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="156dp"
+                android:layout_marginBottom="1dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/datosPrecio"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintStart_toEndOf="@+id/imgProducto"
+                app:layout_constraintTop_toBottomOf="@+id/datosNombre" />
+
+            <ImageView
+                android:id="@+id/imgProducto"
+                android:layout_width="70dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/datosPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="157dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintStart_toEndOf="@+id/imgProducto"
+                app:layout_constraintTop_toBottomOf="@+id/datosTamaño" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="77dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="22dp"
+                android:text="Agregar"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclersito"
+        android:layout_width="395dp"
+        android:layout_height="521dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

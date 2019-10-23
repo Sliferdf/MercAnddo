@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgProducto2"
+            android:layout_width="72dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/datosNombre2"
+            android:layout_width="155dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="14dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imgProducto2"
+            app:layout_constraintTop_toBottomOf="@+id/datosPrecio2" />
+
+        <TextView
+            android:id="@+id/datosTamaño2"
+            android:layout_width="97dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imgProducto2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/datosPrecio2"
+            android:layout_width="92dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="14dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imgProducto2"
+            app:layout_constraintTop_toBottomOf="@+id/datosTamaño2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="22dp"
+            android:text="Agregar"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/unidadProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginBottom="2dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/datosNombre2"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintStart_toEndOf="@+id/datosPrecio2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

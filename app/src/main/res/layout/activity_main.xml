@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonList1"
+        android:layout_width="100dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconolist"
+        android:onClick="Listado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHome1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHome1"
+        android:layout_width="100dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconohist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPrice1"
+        app:layout_constraintStart_toEndOf="@+id/buttonList1" />
+
+    <Button
+        android:id="@+id/buttonPrice1"
+        android:layout_width="100dp"
+        android:layout_height="98dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/iconohist2"
+        android:onClick="Historial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonHome1" />
+
+    <TextView
+        android:id="@+id/textValor"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginEnd="105dp"
+        android:text="Precio de tu compra:"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/textValorNumric"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textValorNumric"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="69dp"
+        android:text="$ 1'000.000"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textValor" />
+
+    <TextView
+        android:id="@+id/textHistory"
+        android:layout_width="145dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="233dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="33dp"
+        android:text="Tu última compra:"
+        android:textAlignment="gravity"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textPriceHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textPriceHistory"
+        android:layout_width="78dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="69dp"
+        android:text="$ 1'000.000"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/dateHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHistory" />
+
+    <EditText
+        android:id="@+id/dateHistory"
+        android:layout_width="102dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="257dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="75dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="18/10/2019"
+        android:textColor="?attr/actionMenuTextColor"
+        app:layout_constraintBottom_toTopOf="@+id/textValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPriceHistory" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
