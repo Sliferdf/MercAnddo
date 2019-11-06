@@ -64,7 +64,7 @@ public class Historial extends AppCompatActivity {
     }
 
     public void Historial(View view){
-        Intent Historial= new Intent(this, Historial.class);
+        Intent Historial= new Intent(this, Productos.class);
         startActivity(Historial);
     }
 

@@ -120,8 +120,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclersito"
-        android:layout_width="395dp"
-        android:layout_height="521dp"
+        android:layout_width="398dp"
+        android:layout_height="516dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="89dp" />
 

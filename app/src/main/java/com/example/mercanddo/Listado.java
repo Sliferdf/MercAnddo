@@ -14,10 +14,6 @@ public class Listado extends AppCompatActivity {
         setContentView(R.layout.activity_listado);
     }
 
-    public void Listado(View view){
-        Intent Listado= new Intent(this, Listado.class);
-        startActivity(Listado);
-    }
 
     public void Historial(View view){
         Intent Historial= new Intent(this, Historial.class);

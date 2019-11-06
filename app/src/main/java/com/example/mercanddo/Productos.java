@@ -2,7 +2,9 @@ package com.example.mercanddo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.mercanddo.Interface.LosPreciosApi;
@@ -24,6 +26,21 @@ public class Productos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos);
 
+    }
+
+    public void Listado(View view){
+        Intent Listado= new Intent(this, Listado.class);
+        startActivity(Listado);
+    }
+
+    public void Historial(View view){
+        Intent Historial= new Intent(this, Productos.class);
+        startActivity(Historial);
+    }
+
+    public void Home(View view){
+        Intent Home= new Intent(this, MainActivity.class);
+        startActivity(Home);
     }
 
 }
